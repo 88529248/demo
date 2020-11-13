@@ -11,7 +11,7 @@ public class InsertSorting {
 	}
 
 	/**
-	 * @param sums
+	 * @param sums 0302
 	 */
 	static void sort(int[] sums) {
 		for (int i = 1; i < sums.length; i++) {
