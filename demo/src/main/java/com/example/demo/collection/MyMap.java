@@ -12,7 +12,6 @@ public class MyMap {
 	 */
 	@Test
 	public void testHashMap() {
-		System.out.println("1");
 
 	}
 
