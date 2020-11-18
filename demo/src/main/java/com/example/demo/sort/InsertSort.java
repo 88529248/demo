@@ -16,7 +16,7 @@ public class InsertSort {
     }
 
     /**
-     * @param
+     *
      */
     static void sort(int[] a) {
         for (int i = 1; i < a.length; i++) {
