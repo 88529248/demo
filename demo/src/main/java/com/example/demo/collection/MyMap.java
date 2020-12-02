@@ -2,6 +2,8 @@ package com.example.demo.collection;
 
 import org.junit.Test;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 public class MyMap {
     /**
      * HashMap K,V都可为null
@@ -25,7 +27,8 @@ public class MyMap {
      * 3. 增加计算Map中元素数量的方法， mappingCount()
      */
     public void testConcurrentHashMap() {
-
+        ConcurrentHashMap map = new ConcurrentHashMap<Integer, Integer>();
+        map.get("");
     }
 
 }

@@ -16,11 +16,13 @@ public class SelectionSort {
     }
 
     /**
-     * 先选择一个最小值，放在第一位，然后从第一位后边再选择相对比较小的放在第二位，以此类推
+     * 先选择一个最小值，放在第一位，然后从第一位后边再选择相对比较小的放在第二位，
+     * 以此类推
      */
     private static void sort(int[] a) {
         for (int i = 0; i < a.length; i++) {
             int min = i;
+            //选择之后待排序值中的最小值
             for (int j = i + 1; j < a.length; j++) {
                 if (a[min] > a[j]) {
                     min = j;
