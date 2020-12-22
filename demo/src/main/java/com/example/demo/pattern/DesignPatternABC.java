@@ -7,6 +7,7 @@ public interface DesignPatternABC {
     /**
      * 1.开闭原则：对原有代码修改关闭，对扩展开放。
      * 2.依赖倒置原则：
+     * 3.接口隔离原则
      */
 
 }

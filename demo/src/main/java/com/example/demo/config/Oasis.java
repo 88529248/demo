@@ -30,7 +30,7 @@ public interface Oasis {
      * rizhi:ssh root@
      * 172.16.4.28   Aa123456
      * mongo:172.16.4.34     psd:azureadminpwd
-     * kafka: ssh root@172.20.2.17   psd: Aa123456
+     * kafka: ssh root@172.20.2.17   psd: Aazureadminpwda123456
      *
      * 国际云：
      * oasisgw.southeastasia.cloudapp.azure.com:22
