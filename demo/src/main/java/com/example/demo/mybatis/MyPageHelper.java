@@ -1,13 +1,14 @@
 package com.example.demo.mybatis;
 
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.PostConstruct;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Properties;
 
 class MyPageHelper {
 
@@ -26,10 +27,9 @@ class MyPageHelper {
 
     @GetMapping("/page")
     public List<PageBean> page(@RequestParam Integer curPage) {
-//        PageHelper.startPage(1, 3,"id desc");  
-//        PageInfo<PageBean> pageBeanPageInfo = new PageInfo<>(list);
-//        return pageBeanPageInfo.getList();
-        return null;
+        PageHelper.startPage(1, 3,"id desc");
+        PageInfo<PageBean> pageBeanPageInfo = new PageInfo<>(list);
+        return pageBeanPageInfo.getList();
 
 
     }
