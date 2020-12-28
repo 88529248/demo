@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * MybatisPlus
+ */
 public interface UserMPMapper extends BaseMapper<User> {
 
 }
