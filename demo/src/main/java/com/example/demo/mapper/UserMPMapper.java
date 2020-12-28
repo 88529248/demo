@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * MybatisPlus
+ *
  */
 public interface UserMPMapper extends BaseMapper<User> {
 
