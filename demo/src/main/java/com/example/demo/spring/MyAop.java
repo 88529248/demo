@@ -3,8 +3,18 @@ package com.example.demo.spring;
 import org.springframework.aop.framework.DefaultAopProxyFactory;
 
 public class MyAop extends DefaultAopProxyFactory {
+
     /**
-     * AOP
+     * AOP动态代理对象生成过程
+     * 1、代理对象生成核心类：AbstractAutoProxyCreator实现了BeanPostProcess(Bean后置处理器)
+     * 2、在postProcessAfterInitialization -> wrapIfNecessary -> createProxy
+     *                              -- proxyFactory.getProxy(getProxyClassLoader())
+     * 3、ProxyFactory父类ProxyCreatorSupport父类构造器实例化了DefaultAopProxyFactory
+     *       public ProxyCreatorSupport() {
+     * 		    this.aopProxyFactory = new DefaultAopProxyFactory();
+     *        }
+     * 4、defaultAopProxyFactory.createAopProxy()
+     *
      * 动态代理两种：
      *     1、JDK动态代理
      *         java动态代理是利用反射机制生成一个实现代理接口的匿名类，在调用具体方法前调用InvokeHandler来处理。
@@ -52,5 +62,7 @@ public class MyAop extends DefaultAopProxyFactory {
      *      4、切面
      *
      */
+
+
 
 }
