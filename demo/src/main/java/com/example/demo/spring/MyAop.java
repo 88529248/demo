@@ -15,6 +15,8 @@ public class MyAop extends DefaultAopProxyFactory {
      *        }
      * 4、defaultAopProxyFactory.createAopProxy()
      *
+     * 5、createAopProxy()中判断使用哪种动态代理生成方式
+     *
      * 动态代理两种：
      *     1、JDK动态代理
      *         java动态代理是利用反射机制生成一个实现代理接口的匿名类，在调用具体方法前调用InvokeHandler来处理。
@@ -28,7 +30,7 @@ public class MyAop extends DefaultAopProxyFactory {
      *          targetClass.isInterface()：确定指定的对象是否表示接口类型
      *          Proxy.isProxyClass(targetClass)：是否是代理类
      *      总结：
-     *          1、在代理对象不是借口类型或不是代理类时，指定proxyTargetClass=true后，执行CGLIB代理
+     *          1、在代理对象不是接口类型或不是代理类时，指定proxyTargetClass=true后，执行CGLIB代理
      *          2、代理对象是接口类型或是代理类，使用JDK代理
      *     源码：
      *     public AopProxy createAopProxy(AdvisedSupport config) throws AopConfigException {
